@@ -21,6 +21,7 @@
 		6542EA6914264DC1002CFEB8 /* NSArray+Grouping.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542EA6714264DC1002CFEB8 /* NSArray+Grouping.m */; };
 		6542EA6A14264DC1002CFEB8 /* NSArray+Grouping.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542EA6714264DC1002CFEB8 /* NSArray+Grouping.m */; };
 		6542EA6D1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542EA6C1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.m */; };
+		659F549B1426561700CCE6F6 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542EA5C14264918002CFEB8 /* NSData+Base64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -289,6 +290,7 @@
 				6542EA64142649DE002CFEB8 /* NSMutableURLRequest+BasicHTTPAuth.m in Sources */,
 				6542EA6A14264DC1002CFEB8 /* NSArray+Grouping.m in Sources */,
 				6542EA6D1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.m in Sources */,
+				659F549B1426561700CCE6F6 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +429,7 @@
 				6542EA55142647EC002CFEB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6542EA56142647EC002CFEB8 /* Build configuration list for PBXNativeTarget "FoundationExtensionsTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +438,7 @@
 				6542EA58142647EC002CFEB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

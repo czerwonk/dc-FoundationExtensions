@@ -12,7 +12,13 @@
 @implementation NSMutableURLRequest (BasicHTTPAuth)
 
 - (void)setBasicHTTPCredentialForUsername:(NSString *)username withPassword:(NSString *)password {
+    NSString *usernamePasswordString = [[NSString alloc] initWithFormat:@"%@:%@", username, password];
+    NSData *authData = [usernamePasswordString dataUsingEncoding:NSUTF8StringEncoding];
+    [usernamePasswordString release];
     
+    NSString *authString = [[NSString alloc] initWithFormat:@"Basic %@", [authData base64EncodedString]];
+    [self setValue:authString forHTTPHeaderField:@"Authorization"];
+    [authString release];
 }
 
 @end

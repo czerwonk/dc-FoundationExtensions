@@ -16,7 +16,7 @@
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setBasicHTTPCredentialForUsername:@"username" withPassword:@"password"];
     NSString *authHeaderValue = [request valueForHTTPHeaderField:@"Authorization"];
-    STAssertEquals(authHeaderValue, @"Basic dXNlcm5hbWU6cGFzc3dvcmQ=", nil);
+    STAssertEqualObjects(authHeaderValue, @"Basic dXNlcm5hbWU6cGFzc3dvcmQ=", nil);
 }
 
 @end
