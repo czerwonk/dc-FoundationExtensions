@@ -22,6 +22,7 @@
 		6542EA6A14264DC1002CFEB8 /* NSArray+Grouping.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542EA6714264DC1002CFEB8 /* NSArray+Grouping.m */; };
 		6542EA6D1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542EA6C1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.m */; };
 		659F549B1426561700CCE6F6 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542EA5C14264918002CFEB8 /* NSData+Base64.m */; };
+		659F54C41426917800CCE6F6 /* NSArrayGroupingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F54C31426917800CCE6F6 /* NSArrayGroupingTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		6542EA6714264DC1002CFEB8 /* NSArray+Grouping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Grouping.m"; sourceTree = "<group>"; };
 		6542EA6B1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+BasicHTTPAuthTests.h"; sourceTree = "<group>"; };
 		6542EA6C1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+BasicHTTPAuthTests.m"; sourceTree = "<group>"; };
+		659F54C21426917800CCE6F6 /* NSArrayGroupingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayGroupingTests.h; sourceTree = "<group>"; };
+		659F54C31426917800CCE6F6 /* NSArrayGroupingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayGroupingTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 			children = (
 				6542EA6B1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.h */,
 				6542EA6C1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.m */,
+				659F54C21426917800CCE6F6 /* NSArrayGroupingTests.h */,
+				659F54C31426917800CCE6F6 /* NSArrayGroupingTests.m */,
 				6542EA48142647EC002CFEB8 /* Supporting Files */,
 			);
 			path = FoundationExtensionsTests;
@@ -225,7 +230,7 @@
 		6542EA23142647EB002CFEB8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = "Mauve Mailorder Software GmbH & Co. KG";
+				ORGANIZATIONNAME = "";
 			};
 			buildConfigurationList = 6542EA26142647EB002CFEB8 /* Build configuration list for PBXProject "FoundationExtensions" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -291,6 +296,7 @@
 				6542EA6A14264DC1002CFEB8 /* NSArray+Grouping.m in Sources */,
 				6542EA6D1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.m in Sources */,
 				659F549B1426561700CCE6F6 /* NSData+Base64.m in Sources */,
+				659F54C41426917800CCE6F6 /* NSArrayGroupingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

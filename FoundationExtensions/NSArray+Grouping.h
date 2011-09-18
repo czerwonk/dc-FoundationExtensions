@@ -23,6 +23,6 @@
 
 @interface NSArray (Grouping)
 
-- (NSDictionary *)groupUsingKeySelector:(id (^)(id obj))selectorBlock sortedBy:(NSComparator)comparator;
+- (NSDictionary *)groupedUsingKeySelector:(id (^)(id obj))selectorBlock sortedBy:(NSComparator)comparator;
 
 @end

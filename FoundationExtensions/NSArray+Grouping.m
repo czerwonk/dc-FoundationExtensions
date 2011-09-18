@@ -23,7 +23,7 @@
 
 @implementation NSArray (Grouping)
 
-- (NSDictionary *)groupUsingKeySelector:(id (^)(id))selectorBlock sortedBy:(NSComparator)comparator {
+- (NSDictionary *)groupedUsingKeySelector:(id (^)(id))selectorBlock sortedBy:(NSComparator)comparator {
     return nil;
 }
 

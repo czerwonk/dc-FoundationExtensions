@@ -1,6 +1,6 @@
 //
 //  NSMutableURLRequest+BasicHTTPAuthTests
-//  NSMutableURLRequestBasicHTTPAuthTests
+//  FoundationExtensions
 //
 //  Created by Daniel Czerwonk on 9/18/11.
 //  Copyright 2011 Daniel Czerwonk <d.czerwonk@gmail.com>
@@ -22,5 +22,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 @interface NSMutableURLRequestBasicHTTPAuthTests : SenTestCase
+
+- (void)testBasicHttpIsSetCorrectInHeader;
 
 @end

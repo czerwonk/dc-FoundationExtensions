@@ -1,5 +1,5 @@
 //
-//  NSMutableURLRequest+BasicHTTPAuthTests
+//  NSArrayGroupingTests.h
 //  FoundationExtensions
 //
 //  Created by Daniel Czerwonk on 9/18/11.
@@ -19,18 +19,10 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>
 //
 
-#import "NSMutableURLRequest+BasicHTTPAuthTests.h"
-#import "NSMutableURLRequest+BasicHTTPAuth.h"
+#import <SenTestingKit/SenTestingKit.h>
 
-@implementation NSMutableURLRequestBasicHTTPAuthTests
+@interface NSArrayGroupingTests : SenTestCase
 
-- (void)testBasicHttpIsSetCorrectInHeader
-{
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setBasicHTTPCredentialForUsername:@"username" withPassword:@"password"];
-    NSString *authHeaderValue = [request valueForHTTPHeaderField:@"Authorization"];
-    [request release];
-    STAssertEqualObjects(authHeaderValue, @"Basic dXNlcm5hbWU6cGFzc3dvcmQ=", nil);
-}
+- (void)testGroupingShouldUseKeySelector;
 
 @end
