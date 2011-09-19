@@ -44,4 +44,20 @@
     [array2 release];
 }
 
+- (void)testGroupingShouldAplplySortComparatorInGroups {
+    NSArray *array = [NSArray arrayWithObjects:@"Abc", @"Bef", @"Bcd", nil];
+    
+    NSComparator sort = ^(id obj1, id obj2){
+        return [(NSString *)obj1 compare:(NSString *)obj2];
+    };
+    NSDictionary *dictionary = [array groupedUsingKeySelector:^(id obj) {
+        return [(NSString *)obj substringToIndex:0];
+    } sortedBy:sort];
+    
+    NSArray *groupForKeyB = [[dictionary objectForKey:@"B"] retain];
+    STAssertEqualObjects([groupForKeyB objectAtIndex:0], @"Bcd", nil);
+    STAssertEqualObjects([groupForKeyB objectAtIndex:1], @"Bef", nil);
+    [groupForKeyB release];
+}
+
 @end

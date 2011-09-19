@@ -24,5 +24,6 @@
 @interface NSArrayGroupingTests : SenTestCase
 
 - (void)testGroupingShouldUseKeySelector;
+- (void)testGroupingShouldAplplySortComparatorInGroups;
 
 @end
