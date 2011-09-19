@@ -23,8 +23,36 @@
 
 @implementation NSArray (Grouping)
 
-- (NSDictionary *)groupedUsingKeySelector:(id (^)(id))selectorBlock sortedBy:(NSComparator)comparator {
-    return nil;
+- (NSDictionary *)groupedUsingKeySelector:(id (^)(id))keySelector sortedByComparator:(NSComparator)comparator {
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    NSArray *array = nil;
+    
+    if (comparator != nil) {
+        // sort array
+        array = [self sortedArrayUsingComparator:comparator];
+    }
+    else {
+        array = self;
+    }
+    
+    // group array
+    [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        id key = keySelector(obj);
+        NSMutableArray *groupArray = [[dictionary objectForKey:key] retain];
+        
+        if (groupArray == nil) {
+            groupArray = [[NSMutableArray alloc] init];
+            [dictionary setValue:groupArray forKey:key];
+        }
+        
+        if (![groupArray containsObject:obj]) {
+            [groupArray addObject:obj];
+        }
+        
+        [groupArray release];
+    }];
+    
+    return dictionary;
 }
 
 @end

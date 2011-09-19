@@ -27,8 +27,8 @@
 - (void)testGroupingShouldUseKeySelector {
     NSArray *array = [NSArray arrayWithObjects:@"Abc", @"Bcd", @"Bef", nil];
     NSDictionary *dictionary = [array groupedUsingKeySelector:^(id obj) {
-        return [(NSString *)obj substringToIndex:0];
-    } sortedBy:nil];
+        return [(NSString *)obj substringToIndex:1];
+    } sortedByComparator:nil];
     
     STAssertEquals((int)[dictionary count], 2, nil, @"dictionary should contain 2 keys");
     
@@ -51,8 +51,8 @@
         return [(NSString *)obj1 compare:(NSString *)obj2];
     };
     NSDictionary *dictionary = [array groupedUsingKeySelector:^(id obj) {
-        return [(NSString *)obj substringToIndex:0];
-    } sortedBy:sort];
+        return [(NSString *)obj substringToIndex:1];
+    } sortedByComparator:sort];
     
     NSArray *groupForKeyB = [[dictionary objectForKey:@"B"] retain];
     STAssertEqualObjects([groupForKeyB objectAtIndex:0], @"Bcd", nil);

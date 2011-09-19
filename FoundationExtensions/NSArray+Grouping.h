@@ -23,6 +23,11 @@
 
 @interface NSArray (Grouping)
 
-- (NSDictionary *)groupedUsingKeySelector:(id (^)(id obj))selectorBlock sortedBy:(NSComparator)comparator;
+/*
+ * Groups elements of the array by using keySelector and builds a dictionary with key-array-pairs.
+ * Elements in group arrays are sorted by comparator. 
+ * @return Instance of NSDictionary with keySelector(obj) as key and a sorted array (per group) as value.
+ */
+- (NSDictionary *)groupedUsingKeySelector:(id (^)(id obj))keySelector sortedByComparator:(NSComparator)comparator;
 
 @end
