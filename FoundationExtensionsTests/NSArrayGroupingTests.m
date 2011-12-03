@@ -22,6 +22,9 @@
 #import "NSArrayGroupingTests.h"
 #import "NSArray+Grouping.h"
 
+#define HC_SHORTHAND
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
+
 @implementation NSArrayGroupingTests
 
 - (void)testGroupingShouldUseKeySelector {
@@ -30,18 +33,9 @@
         return [(NSString *)obj substringToIndex:1];
     } sortedByComparator:nil];
     
-    STAssertEquals((int)[dictionary count], 2, nil, @"dictionary should contain 2 keys");
-    
-    NSArray *array1 = [[dictionary objectForKey:@"A"] retain];
-    STAssertEquals((int)[array1 count], 1, @"array for key A should only contain 1 string");
-    STAssertEqualObjects([array1 objectAtIndex:0], @"Abc", nil);
-    [array1 release];
-    
-    NSArray *array2 = [[dictionary objectForKey:@"B"] retain];
-    STAssertEquals((int)[array2 count], 2, @"array for key B should contain 2 strings");
-    STAssertEqualObjects([array2 objectAtIndex:0], @"Bcd", nil);
-    STAssertEqualObjects([array2 objectAtIndex:1], @"Bef", nil);
-    [array2 release];
+    assertThat(dictionary, hasCountOf(2));
+    assertThat([dictionary objectForKey:@"A"], onlyContains(@"Abc", nil));
+    assertThat([dictionary objectForKey:@"B"], onlyContains(@"Bcd", @"Bef", nil));
 }
 
 - (void)testGroupingShouldAplplySortComparatorInGroups {
@@ -54,10 +48,7 @@
         return [(NSString *)obj substringToIndex:1];
     } sortedByComparator:sort];
     
-    NSArray *groupForKeyB = [[dictionary objectForKey:@"B"] retain];
-    STAssertEqualObjects([groupForKeyB objectAtIndex:0], @"Bcd", nil);
-    STAssertEqualObjects([groupForKeyB objectAtIndex:1], @"Bef", nil);
-    [groupForKeyB release];
+    assertThat([dictionary objectForKey:@"B"], contains(@"Bcd", @"Bef", nil));
 }
 
 @end

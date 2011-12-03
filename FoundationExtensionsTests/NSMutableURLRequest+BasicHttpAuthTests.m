@@ -22,6 +22,9 @@
 #import "NSMutableURLRequest+BasicHTTPAuthTests.h"
 #import "NSMutableURLRequest+BasicHTTPAuth.h"
 
+#define HC_SHORTHAND
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
+
 @implementation NSMutableURLRequestBasicHTTPAuthTests
 
 - (void)testBasicHttpIsSetCorrectInHeader
@@ -30,7 +33,8 @@
     [request setBasicHTTPCredentialForUsername:@"username" withPassword:@"password"];
     NSString *authHeaderValue = [request valueForHTTPHeaderField:@"Authorization"];
     [request release];
-    STAssertEqualObjects(authHeaderValue, @"Basic dXNlcm5hbWU6cGFzc3dvcmQ=", nil);
+    
+    assertThat(authHeaderValue, is(equalTo(@"Basic dXNlcm5hbWU6cGFzc3dvcmQ=")));
 }
 
 @end
