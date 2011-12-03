@@ -18,3 +18,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 Third party code/libraries used in this project:
 NSData+Base64 (2009 Matt Gallagher, http://cocoawithlove.com/2009/06/base64-encoding-options-on-mac-and.html)
+OCHamcrest (2011 hamcrest.org, https://github.com/jonreid/OCHamcrest)

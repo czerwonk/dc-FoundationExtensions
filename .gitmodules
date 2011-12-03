@@ -1,0 +1,3 @@
+[submodule "Third Party/OCHamcrest"]
+	path = Third Party/OCHamcrest
+	url = git://github.com/jonreid/OCHamcrest.git

@@ -23,6 +23,7 @@
 		6542EA6D1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542EA6C1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.m */; };
 		659F549B1426561700CCE6F6 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542EA5C14264918002CFEB8 /* NSData+Base64.m */; };
 		659F54C41426917800CCE6F6 /* NSArrayGroupingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F54C31426917800CCE6F6 /* NSArrayGroupingTests.m */; };
+		65B0D423148ADC50007A32F7 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B0D422148ADC50007A32F7 /* OCHamcrestIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		6542EA6C1426521D002CFEB8 /* NSMutableURLRequest+BasicHTTPAuthTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+BasicHTTPAuthTests.m"; sourceTree = "<group>"; };
 		659F54C21426917800CCE6F6 /* NSArrayGroupingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayGroupingTests.h; sourceTree = "<group>"; };
 		659F54C31426917800CCE6F6 /* NSArrayGroupingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayGroupingTests.m; sourceTree = "<group>"; };
+		65B0D422148ADC50007A32F7 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = "Third Party/OCHamcrest/Source/build/Release/OCHamcrestIOS.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B0D423148ADC50007A32F7 /* OCHamcrestIOS.framework in Frameworks */,
 				6542EA3E142647EC002CFEB8 /* SenTestingKit.framework in Frameworks */,
 				6542EA41142647EC002CFEB8 /* Foundation.framework in Frameworks */,
 				6542EA46142647EC002CFEB8 /* libFoundationExtensions.a in Frameworks */,
@@ -80,6 +83,7 @@
 		6542EA21142647EB002CFEB8 = {
 			isa = PBXGroup;
 			children = (
+				65B0D422148ADC50007A32F7 /* OCHamcrestIOS.framework */,
 				6542EA31142647EB002CFEB8 /* FoundationExtensions */,
 				6542EA47142647EC002CFEB8 /* FoundationExtensionsTests */,
 				6542EA2E142647EB002CFEB8 /* Frameworks */,
@@ -230,6 +234,7 @@
 		6542EA23142647EB002CFEB8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "";
 			};
 			buildConfigurationList = 6542EA26142647EB002CFEB8 /* Build configuration list for PBXProject "FoundationExtensions" */;
@@ -394,6 +399,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/Third Party/OCHamcrest/Source/build/Release\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationExtensions/FoundationExtensions-Prefix.pch";
@@ -409,6 +415,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/Third Party/OCHamcrest/Source/build/Release\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationExtensions/FoundationExtensions-Prefix.pch";
