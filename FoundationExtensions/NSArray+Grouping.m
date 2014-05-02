@@ -38,7 +38,7 @@
     // group array
     [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         id key = keySelector(obj);
-        NSMutableArray *groupArray = [[dictionary objectForKey:key] retain];
+        NSMutableArray *groupArray = [dictionary objectForKey:key];
         
         if (groupArray == nil) {
             groupArray = [[NSMutableArray alloc] init];
@@ -49,7 +49,6 @@
             [groupArray addObject:obj];
         }
         
-        [groupArray release];
     }];
     
     return dictionary;
